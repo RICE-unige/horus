@@ -13,7 +13,7 @@ We welcome and appreciate community involvement in the HORUS project. As this is
 4. **Code Contributions**: Due to the nature of this project as part of PhD research, direct code contributions require prior discussion and approval. If you're interested in contributing code:
    - Email Omotoye Shamsudeen Adekoya at omotoye.adekoya@edu.unige.it
    - Briefly describe your proposed contribution and your relevant experience
-   - Wait for a response before proceeding with any development work
+   - Wait for a response to discuss the contribution and initiate the process of granting you access to the main codebase.
 
 ## Issue Reporting Guidelines
 
@@ -25,7 +25,7 @@ When opening an issue, please provide:
 - Expected behavior
 - Actual behavior
 - Screenshots (if applicable)
-- Your environment (OS, Unity version, Meta Quest firmware version, etc.)
+- Your environment (Meta Quest firmware version, Meta Quest type etc.)
 
 ## Feature Suggestion Guidelines
 
