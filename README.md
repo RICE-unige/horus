@@ -86,13 +86,13 @@ This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE
 ## Contact
 
 For questions or support, please contact:
-Omotoye Shamsudeen Adekoya
+[Omotoye Shamsudeen Adekoya](https://rubrica.unige.it/personale/UkFEXVhg)
 Email: omotoye.adekoya@edu.unige.it
 
 ## Acknowledgments
 
-This project is being developed as part of a PhD research at the University of Genoa, under the supervision of Carmine Recchiuto and Antonio Sgorbissa.
+This project is being developed as part of a PhD research at the University of Genoa, under the supervision of [Prof Carmine Recchiuto](https://rubrica.unige.it/personale/UkNDWV1r) and [Prof Antonio Sgorbissa](https://rubrica.unige.it/personale/UkNHWlJp).
 
 ---
 
-Developed by RICE Lab at the University of Genoa
+Developed by  [RICE Lab](https://rice.dibris.unige.it/) <img src="imgs/rice_lab_logo.png" width="20"/> at the [University of Genoa](https://unige.it/en) <img src="/imgs/unige.png" width="15"/>
