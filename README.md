@@ -81,7 +81,7 @@ We welcome contributions to the HORUS project! Please read our [Contributing Gui
 
 ## License
 
-This project is licensed under the [chosen license]. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
