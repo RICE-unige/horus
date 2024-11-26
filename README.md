@@ -22,7 +22,6 @@
   - [📬 Contact](#-contact)
   - [💡 Acknowledgments](#-acknowledgments)
     - [Developed by](#developed-by)
-
 ---
 
 <a name="overview"></a>
@@ -147,7 +146,7 @@ This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE
 
 For questions or support, please contact:
 - **[Omotoye Shamsudeen Adekoya](https://rubrica.unige.it/personale/UkFEXVhg)**  
-  Email: omotoye.adekoya@edu.unige.it  
+  -  Email: omotoye.adekoya@edu.unige.it  
 
 ---
 
@@ -162,5 +161,5 @@ This project is part of a PhD research at the **University of Genoa**, under the
 ---
 
 ### Developed by  
-[RICE Lab](https://rice.dibris.unige.it/) 🌾 at the [University of Genoa](https://unige.it/en) 🎓  
-<img src="imgs/rice_lab_logo.png" width="20"/> <img src="imgs/unige.png" width="15"/>
+[RICE Lab](https://rice.dibris.unige.it/) <img src="imgs/rice_lab_logo.png" width="20"/> at the [University of Genoa](https://unige.it/en) <img src="imgs/unige.png" width="15"/>  
+ 
