@@ -1,30 +1,29 @@
 <div align="center"><a href="https://rice.dibris.unige.it/"> 
-<img src="imgs/horus_logo.jpg" width="20%" height="20%" title="HORUS" alt="HORUS"> </a></div>
 
-# HORUS: Holistic Operational Reality for Unified Systems 🚀
+| <img src="imgs/horus_logo.jpg" width="20%" height="%" title="HORUS" alt="HORUS"> </a></div> | <h3>Holistic Operational Reality for Unified Systems</h3> |
+| :------------------------------------------------------------------------------------------ | :-------------------------------------------------------: |
 
 ---
 
 ## 📚 Table of Contents
-- [HORUS: Holistic Operational Reality for Unified Systems 🚀](#horus-holistic-operational-reality-for-unified-systems-)
-  - [📚 Table of Contents](#-table-of-contents)
-  - [🔍 Overview](#-overview)
-    - [**Current Version:** `0.0.1`](#current-version-001)
-  - [🌟 Features](#-features)
-  - [🛠 Installation](#-installation)
-  - [🎮 Usage](#-usage)
-    - [Prerequisites](#prerequisites)
-    - [Setup](#setup)
-    - [Using the HORUS Application](#using-the-horus-application)
-  - [🚧 Project Roadmap](#-project-roadmap)
-    - [Year 1 (Current)](#year-1-current)
-    - [Year 2](#year-2)
-    - [Year 3](#year-3)
-  - [🤝 Contributing](#-contributing)
-  - [📝 License](#-license)
-  - [📬 Contact](#-contact)
-  - [💡 Acknowledgments](#-acknowledgments)
-    - [Developed by](#developed-by)
+- [📚 Table of Contents](#-table-of-contents)
+- [🔍 Overview](#-overview)
+  - [**Current Version:** `0.0.1`](#current-version-001)
+- [🌟 Features](#-features)
+- [🛠 Installation](#-installation)
+- [🎮 Usage](#-usage)
+  - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
+  - [Using the HORUS Application](#using-the-horus-application)
+- [🚧 Project Roadmap](#-project-roadmap)
+  - [Year 1 (Current)](#year-1-current)
+  - [Year 2](#year-2)
+  - [Year 3](#year-3)
+- [🤝 Contributing](#-contributing)
+- [📝 License](#-license)
+- [📬 Contact](#-contact)
+- [💡 Acknowledgments](#-acknowledgments)
+  - [Developed by](#developed-by)
 ---
 
 <a name="overview"></a>
