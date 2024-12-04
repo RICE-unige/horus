@@ -1,3 +1,6 @@
+<div align="center"><a href="https://rice.dibris.unige.it/"> 
+<img src="imgs/horus_logo.jpg" width="20%" height="20%" title="HORUS" alt="HORUS"> </a></div>
+
 # HORUS: Holistic Operational Reality for Unified Systems 🚀
 
 ---
