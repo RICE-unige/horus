@@ -1,9 +1,16 @@
-<div align="center"><a href="https://rice.dibris.unige.it/"> 
-
-| <img src="imgs/horus_logo.jpg" width="20%" height="%" title="HORUS" alt="HORUS"> </a></div> | <h3>Holistic Operational Reality for Unified Systems</h3> |
-| :------------------------------------------------------------------------------------------ | :-------------------------------------------------------: |
+<table style="width: 100%; border-collapse: collapse;">
+  <tr>
+    <td style="width: 20%; text-align: center;">
+      <img src="imgs/horus_logo.jpg" style="width: 100%;" title="HORUS" alt="HORUS">
+    </td>
+    <td style="width: 80%; text-align: center;">
+      <h3>Holistic Operational Reality for Unified Systems</h3>
+    </td>
+  </tr>
+</table>
 
 ---
+
 
 ## 📚 Table of Contents
 - [📚 Table of Contents](#-table-of-contents)
