@@ -20,6 +20,7 @@
   - [Year 3](#year-3)
 - [🤝 Contributing](#-contributing)
 - [📝 License](#-license)
+- [📖 Citation](#-citation)
 - [📬 Contact](#-contact)
 - [💡 Acknowledgments](#-acknowledgments)
   - [Developed by](#developed-by)
@@ -140,6 +141,27 @@ We welcome contributions to the HORUS project! Please read our [Contributing Gui
 This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
 
 ---
+
+<a name="citation"></a>
+
+## 📖 Citation
+
+If you use HORUS or ideas from this work in your research, please cite our paper:
+
+- O. S. Adekoya, A. Sgorbissa, C. T. Recchiuto. [**HORUS: A Mixed Reality Interface for Managing Teams of Mobile Robots**](https://arxiv.org/abs/2506.02622). arXiv preprint arXiv:2506.02622, 2025.
+
+  ```bibtex
+  @misc{adekoya2025horus,
+    title     = {HORUS: A Mixed Reality Interface for Managing Teams of Mobile Robots},
+    author    = {Adekoya, Omotoye Shamsudeen and Sgorbissa, Antonio and Recchiuto, Carmine Tommaso},
+    year      = {2025},
+    eprint    = {2506.02622},
+    archivePrefix = {arXiv},
+    primaryClass = {cs.RO},
+    url       = {https://github.com/RICE-unige/horus},
+    pdf       = {https://arxiv.org/abs/2506.02622},
+    note      = {arXiv preprint arXiv:2506.02622}
+  }
 
 <a name="contact"></a>
 
