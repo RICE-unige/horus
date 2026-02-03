@@ -184,5 +184,5 @@ This project is part of a PhD research at the **University of Genoa**, under the
 ---
 
 ### Developed by  
-[RICE Lab](https://rice.dibris.unige.it/) <img src="imgs/rice_lab_logo.png" width="20"/> at the [University of Genoa](https://unige.it/en) <img src="imgs/unige.png" width="15"/>  
+[RICE Lab](https://rice.dibris.unige.it/) <img src="imgs/rice_lab_logo.png" width="22"/> at the [University of Genoa](https://unige.it/en) <img src="imgs/genoa_logo.png" width="40"/>  
  

@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="HORUS is a mixed reality interface for managing teams of mobile robots in complex environments.">
+  <meta name="keywords" content="HORUS, Mixed Reality, Multi-Robot, Teleoperation, Meta Quest 3">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HORUS: A Mixed Reality Interface for Managing Teams of Mobile Robots</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="data:,">
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script defer src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://github.com/RICE-unige/horus" aria-label="HORUS repository">
+      <img src="./static/images/horus_logo.jpg" alt="HORUS logo" style="max-height: 0.24rem;">
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div id="navbarMenu" class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://rice.dibris.unige.it/">RICE Lab</a>
+      <a class="navbar-item" href="https://unige.it/en">University of Genoa</a>
+      <a class="navbar-item" href="https://github.com/RICE-unige/horus/releases">Releases</a>
+    </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">HORUS: A Mixed Reality Interface for Managing Teams of Mobile Robots</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://rubrica.unige.it/personale/UkFEXVhg">Omotoye Shamsudeen Adekoya</a><sup>1</sup>*,
+            </span>
+            <span class="author-block">
+              <a href="https://rubrica.unige.it/personale/UkNHWlJp">Antonio Sgorbissa</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://rubrica.unige.it/personale/UkNDWV1r">Carmine Tommaso Recchiuto</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>DIBRIS Department, RICE Laboratory, University of Genoa, Italy</span>
+          </div>
+          <div class="is-size-6">
+            * Corresponding author: omotoye.adekoya@edu.unige.it
+          </div>
+          <div class="logo-bar">
+            <span class="logo-item">
+              <img src="./static/images/rice_lab_logo.png" alt="RICE Lab logo"><sup>1</sup>
+            </span>
+            <span class="logo-item">
+              <img src="./static/images/genoa_logo.png" alt="University of Genoa logo"><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2506.02622.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2506.02622"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://youtu.be/LqkptCTBrjs"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/RICE-unige/horus"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/RICE-unige/horus/releases"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-download"></i>
+                  </span>
+                  <span>APK</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/Omotoye/horus_bridge"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-exchange-alt"></i>
+                  </span>
+                  <span>Bridge</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/horus_logo.jpg" class="teaser-image" alt="HORUS mixed reality interface teaser">
+      <h2 class="subtitle has-text-centered">
+        HORUS delivers a mixed-reality command layer for multi-robot teams, blending situational awareness,
+        task allocation, and teleoperation inside Meta Quest 3.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Mixed Reality (MR) interfaces have been extensively explored for controlling mobile robots, but there
+            is limited research on their application to managing teams of robots. This paper presents HORUS:
+            Holistic Operational Reality for Unified Systems, a Mixed Reality interface offering a comprehensive
+            set of tools for managing multiple mobile robots simultaneously. HORUS enables operators to monitor
+            individual robot statuses, visualize sensor data projected in real time, and assign tasks to single robots,
+            subsets of the team, or the entire group, all from a Mini-Map (Ground Station). The interface also provides
+            different teleoperation modes: a mini-map mode that allows teleoperation while observing the robot model
+            and its transform on the mini-map, and a semi-immersive mode that offers a flat, screen-like view in either
+            single or stereo view (3D). We conducted a user study in which participants used HORUS to manage a team
+            of mobile robots tasked with finding clues in an environment, simulating search and rescue tasks. This study
+            compared HORUS's full-team management capabilities with individual robot teleoperation. The experiments
+            validated the versatility and effectiveness of HORUS in multi-robot coordination, demonstrating its potential
+            to advance human-robot collaboration in dynamic, team-based environments.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/LqkptCTBrjs?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">System Highlights</h2>
+        <div class="content section-card">
+          <ul>
+            <li>Mixed reality interface for robot control and team management.</li>
+            <li>Multi-robot task allocation with real-time status awareness.</li>
+            <li>Live sensor data visualization and flexible camera views.</li>
+            <li>Gesture-based controls optimized for Meta Quest 3.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Teleoperation Modes</h2>
+        <div class="content section-card">
+          <ul>
+            <li>Minimap (ground-station) mode for 2D navigation and task assignment.</li>
+            <li>Semi-immersive mode with large virtual displays for multi-camera feeds.</li>
+            <li>Full immersion mode with direct front-camera video feed.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Getting Started</h2>
+        <div class="content section-card">
+          <p>
+            Install the latest APK on Meta Quest 3, then run the HORUS Bridge on your laptop to connect
+            robots and stream data into the interface.
+          </p>
+          <div class="publication-links">
+            <span class="link-block">
+              <a href="https://github.com/RICE-unige/horus/releases"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-download"></i>
+                </span>
+                <span>APK Releases</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a href="https://github.com/Omotoye/horus_bridge"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-network-wired"></i>
+                </span>
+                <span>HORUS Bridge</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{adekoya2025horus,
+  title     = {HORUS: A Mixed Reality Interface for Managing Teams of Mobile Robots},
+  author    = {Adekoya, Omotoye Shamsudeen and Sgorbissa, Antonio and Recchiuto, Carmine Tommaso},
+  year      = {2025},
+  eprint    = {2506.02622},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.RO},
+  url       = {https://github.com/RICE-unige/horus},
+  pdf       = {https://arxiv.org/abs/2506.02622},
+  note      = {arXiv preprint arXiv:2506.02622}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://arxiv.org/pdf/2506.02622.pdf" aria-label="PDF">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/RICE-unige/horus" aria-label="Code">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            The layout is adapted from the
+            <a href="https://github.com/nerfies/nerfies.github.io">Nerfies template</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
