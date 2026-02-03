@@ -1,6 +1,8 @@
 |![horus_logo_medium](https://github.com/user-attachments/assets/895961b0-c4b5-4f20-994f-be4ad20efe7f)|<h1><a href="https://rice.dibris.unige.it/"> **H**olistic **O**perational **R**eality for **U**nified Systems </a></h1>|
 |:-:|:-|
 
+**Project Website:** https://rice-unige.github.io/horus/
+
 ---
 
 
