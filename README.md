@@ -1,190 +1,160 @@
-|![horus_logo_medium](https://github.com/user-attachments/assets/895961b0-c4b5-4f20-994f-be4ad20efe7f)|<h1><a href="https://rice.dibris.unige.it/"> **H**olistic **O**perational **R**eality for **U**nified Systems </a></h1>|
-|:-:|:-|
+<p align="center">
+  <img src="imgs/horus_logo_black.svg#gh-light-mode-only" alt="HORUS logo" height="90">
+  <img src="imgs/horus_logo_white.svg#gh-dark-mode-only" alt="HORUS logo" height="90">
+</p>
 
-**Project Website:** https://rice-unige.github.io/horus/
+<p align="center"><em>Holistic Operational Reality for Unified Systems</em></p>
 
----
+[![License](https://img.shields.io/badge/License-Apache--2.0-green.svg)](LICENSE)
+![Platform](https://img.shields.io/badge/Platform-Meta%20Quest%203-brightgreen)
+![Focus](https://img.shields.io/badge/Focus-Research%20Release%20Channel-blue)
 
+> This repository is the research-facing release channel for HORUS.
+> It packages the project narrative, release-facing documentation, and website assets while active implementation evolves across the source repositories.
 
-## 📚 Table of Contents
-- [📚 Table of Contents](#-table-of-contents)
-- [🔍 Overview](#-overview)
-  - [**Current Version:** `0.0.1`](#current-version-001)
-- [🌟 Features](#-features)
-- [🛠 Installation](#-installation)
-- [🎮 Usage](#-usage)
-  - [Prerequisites](#prerequisites)
-  - [Setup](#setup)
-  - [Using the HORUS Application](#using-the-horus-application)
-- [🚧 Project Roadmap](#-project-roadmap)
-  - [Year 1 (Current)](#year-1-current)
-  - [Year 2](#year-2)
-  - [Year 3](#year-3)
-- [🤝 Contributing](#-contributing)
-- [📝 License](#-license)
-- [📖 Citation](#-citation)
-- [📬 Contact](#-contact)
-- [💡 Acknowledgments](#-acknowledgments)
-  - [Developed by](#developed-by)
----
+## Overview
 
-<a name="overview"></a>
+HORUS (Holistic Operational Reality for Unified Systems) is a mixed-reality interface for managing heterogeneous mobile robot teams and teleoperating individual member of the team. The current platform targets Meta Quest 3 and is designed around a workspace-centered operational workflow for real-world robot management, not only lab visualization.
 
-## 🔍 Overview
+This repository is intentionally documentation- and research-oriented:
+- release channel for the HORUS application,
+- project website assets and top-level narrative,
+- high-level onboarding for researchers, reviewers, and collaborators.
 
-HORUS (**Holistic Operational Reality for Unified Systems**) is an innovative Mixed Reality (MR) application developed for the Meta Quest 3 headset. It provides a comprehensive solution for managing teams of heterogeneous robots in various environments, particularly disaster scenarios.
+## Repository Role in the HORUS Stack
 
-### **Current Version:** `0.0.1`  
-This initial release focuses on teleoperation capabilities for wheeled robots (**ROSbots**). Future updates will support heterogeneous robot teams, including legged (**Spot**) and aerial robots (**Airvolute** and **DJI Tello**).
+The active implementation is split across three source repositories:
+- `horus` - Meta Quest MR runtime (Unity application)
+- `horus_sdk` - SDK, registration payloads, examples, and dashboard tooling
+- `horus_ros2` - ROS 2 bridge/runtime infrastructure (TCP/WebRTC)
 
----
+This repository (`horus_research`) complements them by presenting the release-facing view of the project and research direction.
 
-<a name="features"></a>
+## Current Platform Baseline (as of current mainline)
 
-## 🌟 Features
+The HORUS stack currently supports a functional multi-robot MR workflow with the following implemented baselines:
 
-- 🥽 **Mixed reality interface** for robot control and team management.
-- 🤖 **Multi-robot task allocation** and management.
-- 📡 **Real-time sensor data visualization.**
-- ✋ **Gesture-based controls** for intuitive robot interaction.
-- 🚗 **Teleoperation Modes**:
-  - Minimap (Ground Station) Mode
-  - Semi-Immersive Mode
-  - Full Immersion Mode
-- 🎥 Flexible camera visualization.
-- 🧑‍💻 **Optimized for Meta Quest 3 headset.**
+- Workspace-gated robot registration and activation in MR.
+- Multi-robot camera visualization and teleoperation flows.
+- Teleoperation modes including minimap and immersive camera-assisted operation.
+- 2D tasking baseline:
+  - Go-to-point
+  - Waypoint authoring/execution
+  - Label Pose authoring
+  - Go-to-labeled navigation flow integration
+- Sensor and map visualization baseline:
+  - Camera
+  - LaserScan
+  - PointCloud
+  - Occupancy map (global visualization path)
+- DataViz control foundation in Robot Manager for supported channels (with explicit start/stop and unsubscribe behavior).
+- Stereo camera pipeline support for immersive teleoperation (with minimap kept mono by design).
+- WebRTC runtime/bridge recovery hardening for more reliable teleop streaming.
 
----
+## Research Direction and Future Goals
 
-<a name="installation"></a>
+HORUS is being developed as a research platform for scalable mixed-reality robot operations. The next major lines of work include:
 
-## 🛠 Installation
+- Multi-operator collaboration (shared session state, ownership, arbitration, conflict handling)
+- AI copilot assistance for supervision and mission support
+- Expanded tasking workflows (multi-robot coordinated tasking, richer semantic actions)
+- 3D map and advanced scene representations for spatial understanding
+- Persistent mission objects (labels, pins, evidence, operator annotations)
+- Session recording and after-action replay
+- Adaptive streaming and resource-aware transport policies
+- Semantic perception overlays and risk-aware operator guidance
+- Manipulator and mobile-manipulator operational workflows
 
-1. Download the latest APK from the [Releases](https://github.com/RICE-unige/horus/releases) section.
-2. Install the APK on your Meta Quest 3 headset using SideQuest or your preferred method for sideloading apps.
+The emphasis is on experimentally grounded design decisions that can be validated in realistic multi-robot scenarios.
 
-> [!TIP]  
-> Need help with sideloading? Check out the [Meta Support Documentation](https://www.meta.com/help).
+## System Architecture (High Level)
 
----
+```text
+horus_sdk (registration + orchestration + dashboard)
+        <->
+horus_ros2 / horus_unity_bridge (ROS2 TCP/WebRTC bridge)
+        <->
+HORUS MR App (Meta Quest runtime, Unity)
+```
 
-<a name="usage"></a>
+## Releases and Installation
 
-## 🎮 Usage
+For application releases, use the APK packages published in the Releases section of this repository:
+- https://github.com/RICE-unige/horus/releases
 
-<a name="prerequisites"></a>
-### Prerequisites
-1. Install the **HORUS Bridge** application on your laptop, where the ROS master will be launched. Visit the [HORUS Bridge GitHub repository](https://github.com/Omotoye/horus_bridge) for installation instructions.
-2. Ensure that both your laptop running HORUS Bridge and the Meta Quest 3 headset are on the same network.
+Typical deployment flow:
+1. Install the HORUS APK on Meta Quest 3.
+2. Set up the backend stack (`horus_sdk` + `horus_ros2`) on the operator laptop.
+3. Connect headset and backend on the same reachable network.
+4. Launch the bridge, register robots, and accept the workspace in MR.
 
-<a name="setup"></a>
-### Setup
-1. Launch the **HORUS Bridge** on your laptop following the instructions in the HORUS Bridge README.
-2. Set up and connect all robots for the interface. Instructions are provided in the [HORUS Bridge repository](https://github.com/Omotoye/horus_bridge).
+For backend/source setup, follow the source repositories:
+- SDK + installer: https://github.com/RICE-unige/horus_sdk
+- ROS 2 bridge runtime: https://github.com/RICE-unige/horus_ros2
+- MR runtime source (Unity): https://github.com/Omotoye/horus
 
-<a name="using-the-horus-application"></a>
-### Using the HORUS Application
-1. Put on your **Meta Quest 3 headset**.
-2. Navigate to your installed apps and launch HORUS.
-3. Enter the IP address displayed in the **HORUS Bridge log** (on your laptop) into the HORUS application login page.
-4. **Start Managing Robots**:
-   - Draw a workspace in the MR environment to create a minimap.
-   - Use the minimap to:
-     - View robot status.
-     - Visualize sensor data.
-     - Allocate tasks.
-     - Initiate teleoperation.
-5. **Teleoperation Modes**:
-   - 🗺 **Minimap Mode**: Navigate robots using a 2D overhead view.
-   - 🎥 **Semi-Immersive Mode**: View robot camera feeds on a virtual large screen.
-   - 🔍 **Full Immersion Mode**: Experience a direct video feed from the robot's front camera.
+## Practical Validation Workflows (Current)
 
----
+The current recommended validation path uses the SDK fake runtime and registration demos:
 
-<a name="project-roadmap"></a>
+- Unified fake runtime (TF + camera + teleop + tasks, no occupancy in all-in-one ops test)
+- Typical SDK registration demo for multi-robot workflows
+- Stereo camera demo pair for immersive teleop validation (SBS or dual-topic)
 
-## 🚧 Project Roadmap
+These workflows are documented in detail in `horus_sdk/README.md` and tracked against the current runtime behavior in `horus/README.md`.
 
-### Year 1 (Current)  
-- ✅ Develop core HORUS interface in Unity.  
-- ✅ Implement teleoperation modes for wheeled robots.  
-- ⬜ Complete multi-robot management for wheeled robots.  
-- ⬜ Conduct initial user testing and refine the interface.  
+## Project Website
 
-### Year 2  
-- ⬜ Extend support for legged (**Spot**) and aerial (**Airvolute**, **DJI Tello**) robots.  
-- ⬜ Implement advanced trajectory planning and debugging tools.  
-- ⬜ Develop multi-operator functionality.  
-- ⬜ Integrate an AI copilot system for operator assistance.  
+- Project website: https://rice-unige.github.io/horus/
 
-### Year 3  
-- ⬜ Develop and implement collaborative strategies for heterogeneous robot teams.  
-- ⬜ Conduct extensive experimental validation.  
-- ⬜ Optimize the system based on experimental results.  
-- ⬜ Open-source the HORUS application and release an SDK.  
+## Roadmap Framing
 
----
+HORUS development follows a staged research roadmap:
+- establish a robust MR supervision and teleoperation baseline,
+- expand heterogeneous tasking and data visualization depth,
+- scale to multi-operator and copilot-assisted operations,
+- validate through structured experiments and publish reproducible findings.
 
-<a name="contributing"></a>
+## Citation
 
-## 🤝 Contributing
+If you use HORUS or ideas from this work in your research, please cite:
 
-We welcome contributions to the HORUS project! Please read our [Contributing Guidelines](CONTRIBUTING.md) for more information on how to get started.
+O. S. Adekoya, A. Sgorbissa, C. T. Recchiuto. *HORUS: A Mixed Reality Interface for Managing Teams of Mobile Robots*. arXiv preprint arXiv:2506.02622, 2025.
 
-> [!NOTE]  
-> Contributions can include new features, bug fixes, and documentation improvements.
+```bibtex
+@misc{adekoya2025horus,
+  title         = {HORUS: A Mixed Reality Interface for Managing Teams of Mobile Robots},
+  author        = {Adekoya, Omotoye Shamsudeen and Sgorbissa, Antonio and Recchiuto, Carmine Tommaso},
+  year          = {2025},
+  eprint        = {2506.02622},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://github.com/RICE-unige/horus},
+  pdf           = {https://arxiv.org/abs/2506.02622},
+  note          = {arXiv preprint arXiv:2506.02622}
+}
+```
 
----
+## Contact
 
-<a name="license"></a>
+- Omotoye Shamsudeen Adekoya
+- Email: `omotoye.adekoya@edu.unige.it`
 
-## 📝 License
+## Acknowledgments
 
-This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
+This project is part of a PhD research effort at the University of Genoa, under the supervision of:
+- Prof. Carmine Recchiuto
+- Prof. Antonio Sgorbissa
 
----
+Developed at [RICE Lab](https://rice.dibris.unige.it/), [University of Genoa](https://unige.it/en).
 
-<a name="citation"></a>
+## Contributing
 
-## 📖 Citation
+See [`CONTRIBUTING.md`](CONTRIBUTING.md). For research-facing updates, prioritize:
+- clear scope and motivation,
+- reproducible validation steps,
+- explicit relation to current platform baseline or roadmap goals.
 
-If you use HORUS or ideas from this work in your research, please cite our paper:
+## License
 
-- O. S. Adekoya, A. Sgorbissa, C. T. Recchiuto. [**HORUS: A Mixed Reality Interface for Managing Teams of Mobile Robots**](https://arxiv.org/abs/2506.02622). arXiv preprint arXiv:2506.02622, 2025.
-
-  ```bibtex
-  @misc{adekoya2025horus,
-    title     = {HORUS: A Mixed Reality Interface for Managing Teams of Mobile Robots},
-    author    = {Adekoya, Omotoye Shamsudeen and Sgorbissa, Antonio and Recchiuto, Carmine Tommaso},
-    year      = {2025},
-    eprint    = {2506.02622},
-    archivePrefix = {arXiv},
-    primaryClass = {cs.RO},
-    url       = {https://github.com/RICE-unige/horus},
-    pdf       = {https://arxiv.org/abs/2506.02622},
-    note      = {arXiv preprint arXiv:2506.02622}
-  }
-
-<a name="contact"></a>
-
-## 📬 Contact
-
-For questions or support, please contact:
-- **[Omotoye Shamsudeen Adekoya](https://rubrica.unige.it/personale/UkFEXVhg)**  
-  -  Email: omotoye.adekoya@edu.unige.it  
-
----
-
-<a name="acknowledgments"></a>
-
-## 💡 Acknowledgments
-
-This project is part of a PhD research at the **University of Genoa**, under the supervision of:  
-- **[Prof. Carmine Recchiuto](https://rubrica.unige.it/personale/UkNDWV1r)**  
-- **[Prof. Antonio Sgorbissa](https://rubrica.unige.it/personale/UkNHWlJp)**  
-
----
-
-### Developed by  
-[RICE Lab](https://rice.dibris.unige.it/) <img src="imgs/rice_lab_logo.png" width="22"/> at the [University of Genoa](https://unige.it/en) <img src="imgs/genoa_logo.png" width="40"/>  
- 
+Apache-2.0. See [`LICENSE`](LICENSE).
