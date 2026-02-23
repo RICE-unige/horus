@@ -81,6 +81,7 @@ HORUS MR App (Meta Quest runtime, Unity)
 
 For application releases, use the APK packages published in the Releases section of this repository:
 - https://github.com/RICE-unige/horus/releases
+- Latest reusable release (`v0.2.0`): https://github.com/RICE-unige/horus/releases/tag/v0.2.0
 
 Typical deployment flow:
 1. Install the HORUS APK on Meta Quest 3.
