@@ -24,9 +24,6 @@
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="https://github.com/RICE-unige/horus" aria-label="HORUS repository">
-      <img src="./static/images/horus_logo.jpg" alt="HORUS logo" style="max-height: 0.24rem;">
-    </a>
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -66,6 +63,13 @@
           </div>
           <div class="is-size-6">
             * Corresponding author: omotoye.adekoya@edu.unige.it
+          </div>
+          <div class="publication-venue">
+            <span class="venue-badge">Accepted to IEEE UR 2026</span>
+          </div>
+          <div class="publication-venue-detail">
+            The 23rd International Conference on Ubiquitous Robots (UR 2026) · July 15-18, 2026 ·
+            Ritsumeikan University, Ibaraki, Osaka, Japan
           </div>
           <div class="logo-bar">
             <span class="logo-item">
@@ -115,6 +119,15 @@
                   </a>
               </span>
               <span class="link-block">
+                <a href="https://2026.ubiquitousrobots.org/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-award"></i>
+                  </span>
+                  <span>Conference</span>
+                  </a>
+              </span>
+              <span class="link-block">
                 <a href="https://github.com/RICE-unige/horus/releases"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -144,11 +157,13 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="./static/images/horus_logo.jpg" class="teaser-image" alt="HORUS mixed reality interface teaser">
+      <img src="./static/images/horus_logo_black.svg" class="teaser-image" alt="HORUS logo">
+      <div class="teaser-text">
       <h2 class="subtitle has-text-centered">
         HORUS delivers a mixed-reality command layer for multi-robot teams, blending situational awareness,
         task allocation, and teleoperation inside Meta Quest 3.
       </h2>
+      </div>
     </div>
   </div>
 </section>
@@ -156,6 +171,25 @@
 
 <section class="section">
   <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Publication Update</h2>
+        <div class="content section-card conference-card">
+          <p>
+            <strong>HORUS</strong> has been accepted to the
+            <strong>23rd International Conference on Ubiquitous Robots (IEEE UR 2026)</strong>.
+          </p>
+          <p class="conference-meta">
+            July 15-18, 2026 · Ritsumeikan University · Ibaraki, Osaka, Japan
+          </p>
+          <p>
+            This page will continue to host the paper, video, code, and release resources. The official
+            proceedings citation can replace the current arXiv entry once the conference record is published.
+          </p>
+        </div>
+      </div>
+    </div>
+
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
@@ -259,6 +293,9 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
+    <p class="citation-note">
+      Current citation entry uses the arXiv metadata until the official UR 2026 proceedings record is released.
+    </p>
     <pre><code>@misc{adekoya2025horus,
   title     = {HORUS: A Mixed Reality Interface for Managing Teams of Mobile Robots},
   author    = {Adekoya, Omotoye Shamsudeen and Sgorbissa, Antonio and Recchiuto, Carmine Tommaso},
