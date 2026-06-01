@@ -9,6 +9,10 @@
 ![Platform](https://img.shields.io/badge/Platform-Meta%20Quest%203-brightgreen)
 ![Focus](https://img.shields.io/badge/Focus-Research%20Release%20Channel-blue)
 
+**Project website:** https://rice-unige.github.io/horus/
+
+**HORUS updates:** https://www.youtube.com/@horus-mr
+
 > This repository is the research-facing release channel for HORUS.
 > It packages the project narrative, release-facing documentation, and website assets while active implementation evolves across the source repositories.
 
@@ -92,7 +96,6 @@ Typical deployment flow:
 For backend/source setup, follow the source repositories:
 - SDK + installer: https://github.com/RICE-unige/horus_sdk
 - ROS 2 bridge runtime: https://github.com/RICE-unige/horus_ros2
-- MR runtime source (Unity): https://github.com/Omotoye/horus
 
 ## Practical Validation Workflows (Current)
 
@@ -104,10 +107,6 @@ The current recommended validation path uses the SDK fake runtime and registrati
 
 These workflows are documented in detail in `horus_sdk/README.md` and tracked against the current runtime behavior in `horus/README.md`.
 
-## Project Website
-
-- Project website: https://rice-unige.github.io/horus/
-
 ## Roadmap Framing
 
 HORUS development follows a staged research roadmap:
@@ -118,9 +117,20 @@ HORUS development follows a staged research roadmap:
 
 ## Citation
 
-If you use HORUS or ideas from this work in your research, please cite:
+If you use HORUS or ideas from this work in your research, please cite the relevant paper:
 
-O. S. Adekoya, A. Sgorbissa, C. T. Recchiuto. *HORUS: A Mixed Reality Interface for Managing Teams of Mobile Robots*. arXiv preprint arXiv:2506.02622, 2025.
+O. S. Adekoya, A. Sgorbissa, and C. T. Recchiuto. *A Multi-Operator Mixed-Reality Interface for Multi-Robot Control and Coordination: Co-Located and Private Workspace Collaboration*. Accepted to IEEE RO-MAN 2026.
+
+```bibtex
+@misc{adekoya2026multioperator,
+  title  = {A Multi-Operator Mixed-Reality Interface for Multi-Robot Control and Coordination: Co-Located and Private Workspace Collaboration},
+  author = {Adekoya, Omotoye Shamsudeen and Sgorbissa, Antonio and Recchiuto, Carmine Tommaso},
+  year   = {2026},
+  note   = {Accepted to IEEE RO-MAN 2026}
+}
+```
+
+O. S. Adekoya, A. Sgorbissa, and C. T. Recchiuto. *HORUS: A Mixed Reality Interface for Managing Teams of Mobile Robots*. arXiv preprint arXiv:2506.02622, 2025; accepted to IEEE UR 2026.
 
 ```bibtex
 @misc{adekoya2025horus,
@@ -130,9 +140,8 @@ O. S. Adekoya, A. Sgorbissa, C. T. Recchiuto. *HORUS: A Mixed Reality Interface 
   eprint        = {2506.02622},
   archivePrefix = {arXiv},
   primaryClass  = {cs.RO},
-  url           = {https://github.com/RICE-unige/horus},
-  pdf           = {https://arxiv.org/abs/2506.02622},
-  note          = {arXiv preprint arXiv:2506.02622}
+  url           = {https://arxiv.org/abs/2506.02622},
+  note          = {arXiv preprint arXiv:2506.02622; accepted to IEEE UR 2026}
 }
 ```
 
