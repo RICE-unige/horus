@@ -119,14 +119,18 @@ HORUS development follows a staged research roadmap:
 
 If you use HORUS or ideas from this work in your research, please cite the relevant paper:
 
-O. S. Adekoya, A. Sgorbissa, and C. T. Recchiuto. *A Multi-Operator Mixed-Reality Interface for Multi-Robot Control and Coordination: Co-Located and Private Workspace Collaboration*. Accepted to IEEE RO-MAN 2026.
+O. S. Adekoya, A. Sgorbissa, and C. T. Recchiuto. *A Multi-Operator Mixed-Reality Interface for Multi-Robot Control and Coordination: Co-Located and Private Workspace Collaboration*. arXiv preprint arXiv:2606.07013, 2026; accepted to IEEE RO-MAN 2026.
 
 ```bibtex
 @misc{adekoya2026multioperator,
   title  = {A Multi-Operator Mixed-Reality Interface for Multi-Robot Control and Coordination: Co-Located and Private Workspace Collaboration},
   author = {Adekoya, Omotoye Shamsudeen and Sgorbissa, Antonio and Recchiuto, Carmine Tommaso},
   year   = {2026},
-  note   = {Accepted to IEEE RO-MAN 2026}
+  eprint = {2606.07013},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url    = {https://arxiv.org/abs/2606.07013},
+  note   = {arXiv preprint arXiv:2606.07013; accepted to IEEE RO-MAN 2026}
 }
 ```
 
