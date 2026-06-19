@@ -107,6 +107,10 @@ a:hover {
   border-top: 1px solid #d7dbe0;
 }
 
+.publication-table-compact {
+  margin-top: 10px;
+}
+
 .publication-row {
   display: grid;
   grid-template-columns: 82px minmax(0, 1fr) 180px 190px;
@@ -142,10 +146,31 @@ a:hover {
   line-height: 1.55;
 }
 
+.publication-subsection {
+  margin-top: 34px;
+  max-width: 780px;
+}
+
+.publication-subsection h3 {
+  margin: 0 0 7px;
+  color: #20252b;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.publication-subsection p,
+.publication-meta {
+  color: #6a7280;
+  font-size: 0.92rem;
+}
+
 .publication-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 10px 12px;
+  align-items: flex-start;
 }
 
 .publication-actions a,
@@ -160,6 +185,28 @@ a:hover {
 .publication-actions span {
   color: #6a7280;
   border-bottom-color: transparent;
+}
+
+.publication-actions .poster-action {
+  align-items: center;
+  gap: 7px;
+  border-bottom: 0;
+}
+
+.poster-action img {
+  display: block;
+  width: 34px;
+  height: 46px;
+  border: 1px solid #d7dbe0;
+  border-radius: 3px;
+  background: #f8f9fa;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.poster-action span {
+  color: #1f5f9f;
+  border-bottom: 1px solid currentColor;
 }
 
 .software-links {
