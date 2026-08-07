@@ -351,6 +351,13 @@ a:hover {
   object-fit: contain;
 }
 
+.paper-teaser-image {
+  max-width: 900px;
+  border: 1px solid #e4e6e8;
+  border-radius: 8px;
+  box-shadow: 0 16px 30px rgba(10, 10, 10, 0.12);
+}
+
 .logo-bar {
   display: flex;
   align-items: center;
@@ -370,11 +377,56 @@ a:hover {
   display: inline-flex;
   align-items: flex-start;
   gap: 0.25rem;
+  color: inherit;
 }
 
 .logo-item sup {
   font-size: 0.65rem;
   line-height: 1;
+}
+
+.affiliation-logo-bar {
+  gap: 1rem 1.4rem;
+}
+
+.affiliation-logo-bar img {
+  max-width: 190px;
+  max-height: 82px;
+  object-fit: contain;
+}
+
+.logo-item-dark {
+  align-items: center;
+  background: #16324a;
+  border-radius: 6px;
+  padding: 0.6rem 0.75rem;
+}
+
+.logo-item-dark sup {
+  color: #ffffff;
+}
+
+.support-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(32, 44, 76, 0.1);
+}
+
+.support-logo-row img {
+  display: block;
+  max-width: 260px;
+  max-height: 76px;
+  object-fit: contain;
+}
+
+.support-logo-row p {
+  margin-bottom: 0;
+  color: #374151;
+  font-size: 0.95rem;
+  line-height: 1.45;
 }
 
 .section-card {
@@ -404,6 +456,15 @@ a:hover {
 }
 
 @media screen and (max-width: 760px) {
+  .support-logo-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .support-logo-row img {
+    max-width: 100%;
+  }
+
   .research-shell {
     width: min(100% - 32px, 980px);
     padding-top: 24px;

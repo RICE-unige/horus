@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="HORUS: Architecture and Performance Characterization of an Open-Source Mixed-Reality Platform for Heterogeneous Multi-Robot Operations. Accepted at I-RIM 3D 2026 in the SPAR Papers track.">
+  <meta name="keywords" content="HORUS, I-RIM 3D 2026, SPAR, mixed reality, heterogeneous multi-robot teams, ROS 2">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HORUS: Architecture and Performance Characterization</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/css/bulma.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="../../static/css/index.css">
+  <link rel="icon" href="data:,">
+
+  <script defer src="../../static/js/fontawesome.all.min.js"></script>
+  <script defer src="../../static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div id="navbarMenu" class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="../../">Home</a>
+      <a class="navbar-item" href="https://rice.dibris.unige.it/">RICE Lab</a>
+      <a class="navbar-item" href="https://unige.it/en">University of Genoa</a>
+      <a class="navbar-item" href="https://www.youtube.com/@horus-mr">YouTube</a>
+      <a class="navbar-item" href="https://github.com/RICE-unige/horus/releases">Releases</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">HORUS: Architecture and Performance Characterization of an Open-Source Mixed-Reality Platform for Heterogeneous Multi-Robot Operations</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Omotoye Shamsudeen Adekoya<sup>1</sup>*,</span>
+            <span class="author-block">Simone D'Angelo<sup>2,3</sup>,</span>
+            <span class="author-block">Francesca Pagano<sup>2,3</sup>,</span>
+            <span class="author-block">Vincenzo Lippiello<sup>2</sup>,</span>
+            <span class="author-block">Antonio Sgorbissa<sup>1</sup>,</span>
+            <span class="author-block">Carmine Tommaso Recchiuto<sup>1</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>DIBRIS Department, RICE Laboratory, University of Genoa, Italy</span><br>
+            <span class="author-block"><sup>2</sup>DIETI, PRISMA Lab, University of Naples Federico II, Italy</span><br>
+            <span class="author-block"><sup>3</sup>CeSMA, University of Naples Federico II, Italy</span>
+          </div>
+          <div class="is-size-6">
+            * Corresponding author: omotoye.adekoya@edu.unige.it
+          </div>
+          <div class="publication-venue">
+            <span class="venue-badge">Accepted at I-RIM 3D 2026</span>
+          </div>
+          <div class="publication-venue-detail">
+            SPAR Papers track &middot; Springer Proceedings in Advanced Robotics
+          </div>
+          <div class="logo-bar affiliation-logo-bar" aria-label="Affiliated institutions">
+            <a class="logo-item" href="https://rice.dibris.unige.it/" aria-label="RICE Lab">
+              <img src="../../static/images/rice_lab_logo.png" alt="RICE Lab logo"><sup>1</sup>
+            </a>
+            <a class="logo-item" href="https://unige.it/en" aria-label="University of Genoa">
+              <img src="../../static/images/genoa_logo.png" alt="University of Genoa logo"><sup>1</sup>
+            </a>
+            <a class="logo-item" href="https://prisma.dieti.unina.it/" aria-label="PRISMA Lab">
+              <img src="../../static/images/prisma_lab_logo.png" alt="PRISMA Lab logo"><sup>2</sup>
+            </a>
+            <a class="logo-item logo-item-dark" href="https://www.unina.it/" aria-label="University of Naples Federico II">
+              <img src="../../static/images/unina_logo.png" alt="University of Naples Federico II logo"><sup>2,3</sup>
+            </a>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <span class="button is-normal is-rounded is-light">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Final paper forthcoming</span>
+                </span>
+              </span>
+              <span class="link-block">
+                <a href="https://i-rim.it/it/conferenza-i-rim-3d-2026/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-award"></i>
+                  </span>
+                  <span>Conference</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/RICE-unige/horus"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/RICE-unige/horus/releases"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-download"></i>
+                  </span>
+                  <span>APK</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://www.youtube.com/@horus-mr"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Project updates</span>
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="../../static/images/irim-2026-horus.jpg" class="teaser-image paper-teaser-image" alt="H-CoRE aerial-ground robot team represented in HORUS">
+      <div class="teaser-text">
+      <h2 class="subtitle has-text-centered">
+        HORUS is presented as an open-source, registration-driven mixed-reality operations platform for heterogeneous
+        robot teams, combining a Meta Quest runtime, SDK, and ROS 2 bridge.
+      </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Publication Update</h2>
+        <div class="content section-card conference-card">
+          <p>
+            This HORUS architecture and performance-characterization paper has been accepted at
+            <strong>I-RIM 3D 2026</strong> in the <strong>SPAR Papers</strong> track.
+          </p>
+          <p class="conference-meta">
+            Papers in this track will appear in the Springer Proceedings in Advanced Robotics series.
+          </p>
+          <p>
+            The final paper link will be added after the proceedings metadata are available.
+          </p>
+          <div class="support-logo-row">
+            <a href="https://biorob-hub.eu/" aria-label="BRIEF project">
+              <img src="../../static/images/brief_logo.png" alt="BRIEF Biorobotics Research and Innovation Engineering Facilities logo">
+            </a>
+            <p>
+              Supported by the BRIEF Biorobotics Research and Innovation Engineering Facilities project
+              (IR0000036), funded under NRRP Mission 4 Component 2 Investment 3.1 by the Italian Ministry
+              of University and Research and the European Union NextGenerationEU.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Mixed reality can support multi-robot supervision by presenting robot state, maps, sensing, and commands
+            in the operator's workspace. Existing systems are often tied to specific robots, missions, or visualization
+            pipelines. HORUS addresses this by using a registration-driven architecture in which robots declare their
+            frames, sensors, maps, task interfaces, models, and teleoperation channels, and the MR runtime constructs
+            the corresponding operator workspace.
+          </p>
+          <p>
+            The paper describes the HORUS stack, including the MR runtime, Python SDK, and ROS 2 bridge; shared and
+            private multi-operator workspaces; and bridge-enforced per-robot control leases. It also characterizes
+            latency, camera streams, map representations, command and transform rates, robot/operator workload
+            configurations, bridge restart recovery, and an H-CoRE aerial-ground robot-team integration.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">System Focus</h2>
+        <div class="content section-card">
+          <ul>
+            <li>Registration-driven capability model for heterogeneous robot teams.</li>
+            <li>Mixed-reality workspace generation from declared robot capabilities instead of robot-specific scenes.</li>
+            <li>ROS 2 bridge and SDK architecture for state, map, sensor, task, and teleoperation channels.</li>
+            <li>Shared/private multi-operator workspaces and per-robot command leases.</li>
+            <li>System-level performance characterization and H-CoRE integration demonstration.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <p class="citation-note">
+      Provisional citation entry until the final Springer proceedings metadata are released.
+    </p>
+    <pre><code>@inproceedings{adekoya2026horusarchitecture,
+  title     = {HORUS: Architecture and Performance Characterization of an Open-Source Mixed-Reality Platform for Heterogeneous Multi-Robot Operations},
+  author    = {Adekoya, Omotoye Shamsudeen and D'Angelo, Simone and Pagano, Francesca and Lippiello, Vincenzo and Sgorbissa, Antonio and Recchiuto, Carmine Tommaso},
+  booktitle = {I-RIM 3D 2026, SPAR Papers Track},
+  year      = {2026},
+  note      = {Accepted; to appear in Springer Proceedings in Advanced Robotics}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/RICE-unige/horus" aria-label="Code">
+        <i class="fab fa-github"></i>
+      </a>
+      <a class="icon-link" href="https://www.youtube.com/@horus-mr" aria-label="HORUS YouTube channel">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            The layout is adapted from the
+            <a href="https://github.com/nerfies/nerfies.github.io">Nerfies template</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

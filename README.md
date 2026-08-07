@@ -119,6 +119,18 @@ HORUS development follows a staged research roadmap:
 
 If you use HORUS or ideas from this work in your research, please cite the relevant paper:
 
+O. S. Adekoya, S. D'Angelo, F. Pagano, V. Lippiello, A. Sgorbissa, and C. T. Recchiuto. *HORUS: Architecture and Performance Characterization of an Open-Source Mixed-Reality Platform for Heterogeneous Multi-Robot Operations*. Accepted at I-RIM 3D 2026, SPAR Papers track; to appear in Springer Proceedings in Advanced Robotics.
+
+```bibtex
+@inproceedings{adekoya2026horusarchitecture,
+  title     = {HORUS: Architecture and Performance Characterization of an Open-Source Mixed-Reality Platform for Heterogeneous Multi-Robot Operations},
+  author    = {Adekoya, Omotoye Shamsudeen and D'Angelo, Simone and Pagano, Francesca and Lippiello, Vincenzo and Sgorbissa, Antonio and Recchiuto, Carmine Tommaso},
+  booktitle = {I-RIM 3D 2026, SPAR Papers Track},
+  year      = {2026},
+  note      = {Accepted; to appear in Springer Proceedings in Advanced Robotics}
+}
+```
+
 O. S. Adekoya, A. Sgorbissa, and C. T. Recchiuto. *A Multi-Operator Mixed-Reality Interface for Multi-Robot Control and Coordination: Co-Located and Private Workspace Collaboration*. arXiv preprint arXiv:2606.07013, 2026; accepted to IEEE RO-MAN 2026.
 
 ```bibtex
