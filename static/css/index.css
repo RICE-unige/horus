@@ -238,6 +238,43 @@ a:hover {
   padding: 0;
 }
 
+.citation-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  min-height: 32px;
+}
+
+.citation-copy {
+  padding: 4px 0;
+  border: 0;
+  background: transparent;
+  color: #17679b;
+  font: inherit;
+  cursor: pointer;
+}
+
+.citation-copy:hover {
+  text-decoration: underline;
+}
+
+.citation-copy:focus-visible,
+.navbar-burger:focus-visible {
+  outline: 2px solid #17679b;
+  outline-offset: 4px;
+}
+
+.citation-copy-status {
+  font-size: 0.85rem;
+  color: #50606a;
+}
+
+button.navbar-burger {
+  border: 0;
+  background: transparent;
+}
+
 .research-footer {
   margin-top: 56px;
   padding-top: 24px;

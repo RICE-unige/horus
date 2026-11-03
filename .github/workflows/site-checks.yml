@@ -1,0 +1,19 @@
+name: Website Checks
+
+on:
+  pull_request:
+  push:
+    branches: [main, dev-plus]
+  workflow_dispatch:
+
+jobs:
+  local-links:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check pages, links, and assets
+        run: python3 tools/check_site.py
+      - name: Test link checker
+        run: python3 -m unittest discover -s tools -p 'test_*.py'
+      - name: Check JavaScript syntax
+        run: node --check static/js/index.js

@@ -18,7 +18,7 @@
 
 ## Overview
 
-HORUS (Holistic Operational Reality for Unified Systems) is a mixed-reality interface for managing heterogeneous mobile robot teams and teleoperating individual member of the team. The current platform targets Meta Quest 3 and is designed around a workspace-centered operational workflow for real-world robot management, not only lab visualization.
+HORUS (Holistic Operational Reality for Unified Systems) is a mixed-reality interface for managing heterogeneous mobile robot teams and teleoperating individual members of the team. The current platform targets Meta Quest 3 and is designed around a workspace-centered operational workflow for real-world robot management, not only lab visualization.
 
 This repository is intentionally documentation- and research-oriented:
 - release channel for the HORUS application,
@@ -34,11 +34,13 @@ The active implementation is split across three source repositories:
 
 This repository (`horus_research`) complements them by presenting the release-facing view of the project and research direction.
 
-## Current Platform Baseline (as of current mainline)
+## Platform Capabilities
 
-The HORUS stack currently supports a functional multi-robot MR workflow with the following implemented baselines:
+The development stack includes the capabilities below. A published APK may support an earlier subset; use its release notes and matching SDK/bridge versions. See the [SDK implementation status](https://rice-unige.github.io/horus_sdk/docs/reference/implementation-status) for component boundaries.
 
 - Workspace-gated robot registration and activation in MR.
+- Shared and private multi-operator workspaces with per-robot control leases.
+- Articulated robot models driven by TF, with mesh colours and materials.
 - Multi-robot camera visualization and teleoperation flows.
 - Teleoperation modes including minimap and immersive camera-assisted operation.
 - 2D tasking baseline:
@@ -51,21 +53,32 @@ The HORUS stack currently supports a functional multi-robot MR workflow with the
   - LaserScan
   - PointCloud
   - Occupancy map (global visualization path)
+  - Native 3D triangle meshes, including incremental mapping and retained-map replay
+  - Full-grid costmaps; SDK normalization of raw Nav2 costs and incremental updates
 - DataViz control foundation in Robot Manager for supported channels (with explicit start/stop and unsubscribe behavior).
 - Stereo camera pipeline support for immersive teleoperation (with minimap kept mono by design).
 - WebRTC runtime/bridge recovery hardening for more reliable teleop streaming.
+
+### Experimental and Optional Paths
+
+- Native Gaussian splatting requires tracked-headset stereo and sustained-load qualification.
+- Remote GPU rendering currently serves static scenes to one active viewer per agent. Live map ingestion and independent multi-view rendering are not yet available.
+- HORUS Teach provides configurable humanoid embodiment, engagement/hold controls and native episode recording. A synthetic demonstration is available; physical robot adapters require their own qualification. Recorded data can be reviewed with the user's chosen tools.
+- C++ and Rust SDKs provide payload/model APIs; live registration and dashboard parity with Python are not complete.
+
+Performance depends on sensor rates, geometry, visible content, robot/operator count, network and hardware. HORUS does not claim an unlimited map size or a certified emergency-stop function.
 
 ## Research Direction and Future Goals
 
 HORUS is being developed as a research platform for scalable mixed-reality robot operations. The next major lines of work include:
 
-- Multi-operator collaboration (shared session state, ownership, arbitration, conflict handling)
+- Broader multi-operator scaling and sustained-load qualification
 - AI copilot assistance for supervision and mission support
 - Expanded tasking workflows (multi-robot coordinated tasking, richer semantic actions)
-- 3D map and advanced scene representations for spatial understanding
+- Live remote mapping and independent multi-view GPU rendering
 - Persistent mission objects (labels, pins, evidence, operator annotations)
 - Session recording and after-action replay
-- Adaptive streaming and resource-aware transport policies
+- Fleet-wide admission and prioritization beyond the existing bounded transport queues
 - Semantic perception overlays and risk-aware operator guidance
 - Manipulator and mobile-manipulator operational workflows
 
@@ -85,13 +98,13 @@ HORUS MR App (Meta Quest runtime, Unity)
 
 For application releases, use the APK packages published in the Releases section of this repository:
 - https://github.com/RICE-unige/horus/releases
-- Latest reusable release (`v0.2.0`): https://github.com/RICE-unige/horus/releases/tag/v0.2.0
+- Choose a release using its compatibility notes; development features described above are not a claim that an older APK includes them.
 
 Typical deployment flow:
 1. Install the HORUS APK on Meta Quest 3.
 2. Set up the backend stack (`horus_sdk` + `horus_ros2`) on the operator laptop.
 3. Connect headset and backend on the same reachable network.
-4. Launch the bridge, register robots, and accept the workspace in MR.
+4. Launch an SDK registration example (supported examples start the bridge automatically), connect the app, and create the workspace in MR.
 
 For backend/source setup, follow the source repositories:
 - SDK + installer: https://github.com/RICE-unige/horus_sdk
@@ -112,7 +125,7 @@ These workflows are documented in detail in `horus_sdk/README.md` and tracked ag
 HORUS development follows a staged research roadmap:
 - establish a robust MR supervision and teleoperation baseline,
 - expand heterogeneous tasking and data visualization depth,
-- scale to multi-operator and copilot-assisted operations,
+- extend multi-operator operations and qualify copilot-assisted workflows,
 - validate through structured experiments and publish reproducible findings.
 
 ## Citation
@@ -175,6 +188,19 @@ This project is part of a PhD research effort at the University of Genoa, under 
 Developed at [RICE Lab](https://rice.dibris.unige.it/), [University of Genoa](https://unige.it/en).
 
 ## Contributing
+
+Local website checks need Python 3.10 or later and Node.js:
+
+```bash
+python3 tools/check_site.py
+python3 -m unittest discover -s tools -p 'test_*.py'
+node --check static/js/index.js
+```
+
+Open `index.html` locally, or preview GitHub Pages paths with
+`python3 -m http.server 8080`. Publication pages share keyboard-accessible mobile
+navigation and copyable BibTeX controls. Update publication metadata only from
+the accepted manuscript or an authoritative record.
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md). For research-facing updates, prioritize:
 - clear scope and motivation,
